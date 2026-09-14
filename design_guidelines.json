@@ -1,0 +1,153 @@
+{
+  "project_name": "Somewhere Together",
+  "tagline": "Where connections begin, stories unfold.",
+  "archetype": "ORGANIC & EARTHY / EDITORIAL HUMANISM",
+  "emotional_tone": "Warm, personal, beautiful, quiet kindness, calm, slightly magical",
+  "app_type": "landing_page",
+  "target_audience": "Physical QR card scanners seeking a quiet, unexpected moment of delight and pause",
+  "design_rules": {
+    "theme": "Light theme default",
+    "forbidden_colors": ["#7351B7", "#1B93A4", "neon colors", "harsh saturated gradients"],
+    "forbidden_fonts": ["Inter", "Space Grotesk", "Roboto", "Comic Sans"],
+    "forbidden_patterns": ["Corporate SaaS layout", "Dense card grids", "Vercel dark boxes", "Centered everything disease", "Childish illustrations", "Heavy drop shadows"],
+    "text_size_limits": {
+      "h1_hero": "text-3xl sm:text-4xl lg:text-5xl font-serif leading-tight",
+      "h2_section": "text-2xl sm:text-3xl font-serif leading-snug",
+      "body": "text-base sm:text-lg leading-relaxed text-[#3D382F]",
+      "muted": "text-sm text-[#81796E]",
+      "label": "text-xs tracking-[0.25em] uppercase text-[#81796E]"
+    }
+  },
+  "colors": {
+    "background": "#FAF7F0",
+    "main_text": "#3D382F",
+    "muted_text": "#81796E",
+    "border_details": "#E7E0D5",
+    "accent_warm": "#C25E00",
+    "accent_subtle": "#F3EDE2",
+    "dot_active": "#3D382F",
+    "dot_inactive": "#E7E0D5"
+  },
+  "typography": {
+    "headings": {
+      "family": "'Playfair Display', Georgia, serif",
+      "weights": ["400", "600"],
+      "google_font_url": "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    },
+    "body_and_ui": {
+      "family": "'DM Sans', -apple-system, sans-serif",
+      "weights": ["400", "500"]
+    }
+  },
+  "layout_and_structure": {
+    "viewport_container": "min-h-[100dvh] w-full bg-[#FAF7F0] text-[#3D382F] flex flex-col items-center justify-between p-6 sm:p-10 select-none overflow-x-hidden relative",
+    "inner_card_wrapper": "w-full max-w-md mx-auto my-auto flex flex-col items-center text-center justify-center space-y-8 z-10",
+    "grain_overlay": "pointer-events-none fixed inset-0 opacity-[0.035] z-50 bg-[radial-gradient(#3d382f_1px,transparent_1px)] [background-size:16px_16px]"
+  },
+  "screens_and_flow": {
+    "screen_0_hero": {
+      "description": "First view scanned from QR code. Pure centered composition with zero distractions.",
+      "components": [
+        "Integrated Brand Mark / Logo (SVG custom curved organic emblem blended into background without card or border)",
+        "On-load masked line-by-line text reveal using Framer Motion",
+        "Heading (Playfair Display): 'A little something for you.'",
+        "Subtitle (DM Sans): 'No reason. No occasion. Just because you're here.'",
+        "Primary Action Button: 'Give me a little something →' with gentle warm glow hover and active press state",
+        "Small Muted Note: 'Take a tiny pause.'"
+      ]
+    },
+    "screen_1_to_5_moments": {
+      "description": "5-step interactive sequence. One category moment at a time in fixed category order with randomized quote selection per session.",
+      "categories": [
+        {"step": 1, "name": "A Reminder", "icon": "Sparkle"},
+        {"step": 2, "name": "A Tiny Pause", "icon": "Wind"},
+        {"step": 3, "name": "A Connection", "icon": "HeartHandshake"},
+        {"step": 4, "name": "A Mood Shift", "icon": "Sun"},
+        {"step": 5, "name": "Something Silly", "icon": "Smile"}
+      ],
+      "progress_bar": "5 soft dots at the top of the viewport. Active dot expands to pill with smooth background shift.",
+      "moments_data_bank": {
+        "reminder": [
+          "You are doing much better than you give yourself credit for.",
+          "You don't have to figure out your entire life today.",
+          "It is okay to rest without earning it first.",
+          "Your quiet efforts are leaving warm ripples you can't even see."
+        ],
+        "pause": [
+          "Take one deep breath right now. Drop your shoulders away from your ears.",
+          "Unclench your jaw. Relax your forehead. Release your hands.",
+          "Close your eyes for 5 seconds and listen to the furthest sound you can hear.",
+          "Place one hand on your chest and take two slow, warm breaths."
+        ],
+        "connection": [
+          "Think of someone who brought light into your week. Send them a quiet mental thank you.",
+          "Somewhere out there, someone remembers a kind word you said years ago.",
+          "We are all walking each other home, step by small step.",
+          "Reach out to an old friend today just to ask how their heart is doing."
+        ],
+        "mood_shift": [
+          "Look out the window or at the nearest doorway. Notice three soft colors.",
+          "Gently roll your ankles and wrists. Feel the physical space you occupy right now.",
+          "Imagine setting down a heavy backpack you've been carrying all week.",
+          "Smile quietly to yourself for no reason other than being right here."
+        ],
+        "silly": [
+          "Did you know sea otters hold hands while sleeping so they don't drift apart?",
+          "A group of pugs is called a 'grumble'. Now you live with this knowledge.",
+          "Cows have best friends and get stressed when they are separated.",
+          "Wombat poop is shaped like cubes so it doesn't roll away."
+        ]
+      }
+    },
+    "screen_ending": {
+      "description": "Climax screen after completing step 5.",
+      "components": [
+        "Warm Climax Heading: 'That was your little something. 💛'",
+        "Subtext: 'Maybe you needed one. Maybe you didn't. Either way, we're glad you stopped by.'",
+        "Restart CTA: 'Give me another little something →' (generates a fresh randomized set from content pool)",
+        "Slow Editorial Marquee at bottom: 'Where connections begin, stories unfold. • Somewhere Together • Where connections begin, stories unfold.'",
+        "Option to share or copy a moment card as a digital note"
+      ]
+    }
+  },
+  "motion_and_microinteractions": {
+    "page_transitions": "Framer Motion layout animations with opacity 0 -> 1 and subtle y offset (12px -> 0px) with cubic-bezier(0.25, 1, 0.5, 1)",
+    "button_interactions": "scale 1.02 on hover, scale 0.98 on press, soft shadow glow transition",
+    "progress_dots_animation": "layoutId transition for active step width expansion"
+  },
+  "image_urls": {
+    "texture_overlay": "https://images.unsplash.com/photo-1601662528567-526cd06f6582?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "soft_art_bg": "https://images.unsplash.com/photo-1612293025896-7200cc87e540?crop=entropy&cs=srgb&fm=jpg&q=85"
+  },
+  "testing": {
+    "required_test_ids": [
+      "app-container",
+      "hero-title",
+      "hero-subtitle",
+      "hero-cta-button",
+      "hero-small-text",
+      "progress-dots-container",
+      "progress-dot-1",
+      "progress-dot-2",
+      "progress-dot-3",
+      "progress-dot-4",
+      "progress-dot-5",
+      "moment-category-badge",
+      "moment-content-text",
+      "moment-next-button",
+      "ending-title",
+      "ending-subtitle",
+      "ending-restart-button",
+      "ending-marquee"
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Load Google Fonts Playfair Display and DM Sans in index.html / index.css.",
+    "Ensure background is strictly #FAF7F0 with zero dark mode toggle or SaaS borders.",
+    "Implement Framer Motion for line-by-line text reveals and crossfade moment slides.",
+    "Ensure exact fixed order for moments: Reminder -> Tiny Pause -> Connection -> Mood Shift -> Something Silly.",
+    "Ensure fresh randomized selection on each restart from the moment bank.",
+    "Implement the editorial marquee on the ending screen using infinite CSS/framer-motion loop.",
+    "Ensure all data-testid attributes listed in testing.required_test_ids are strictly present."
+  ]
+}
