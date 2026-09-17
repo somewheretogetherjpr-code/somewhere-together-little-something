@@ -1,0 +1,88 @@
+export const CATEGORIES = [
+    {
+        id: "reminder",
+        label: "A Reminder",
+        emoji: "\u{1F33B}",
+        color: "#B08D3E",
+        messages: [
+            "You’re doing better than you think.",
+            "You don’t have to have everything figured out today.",
+            "You’ve made it through every hard day so far. All of them.",
+            "Someone is glad you exist. Probably more than one someone.",
+            "You’re allowed to be a work in progress.",
+            "Rest is not something you have to earn.",
+            "You’ve been kinder to others than to yourself. Even that out.",
+            "The fact that you care this much says something good about you.",
+        ],
+    },
+    {
+        id: "pause",
+        label: "A Tiny Pause",
+        emoji: "☀️",
+        color: "#C07648",
+        messages: [
+            "Take one slow breath. That’s enough.",
+            "Look around. Find one thing you like.",
+            "Put your phone away for 30 seconds. Just be here.",
+            "Unclench your jaw. Drop your shoulders. There you go.",
+            "Close your eyes for ten seconds. The world can wait.",
+            "Listen. What’s the quietest sound you can hear right now?",
+            "Feel your feet on the ground. You’re here. That’s enough.",
+            "Sip something slowly. Even water counts.",
+        ],
+    },
+    {
+        id: "connection",
+        label: "A Connection",
+        emoji: "\u{1FAF6}",
+        color: "#B4756A",
+        messages: [
+            "Think of someone who makes life feel lighter. Text them.",
+            "Make someone smile before you leave.",
+            "Tell someone you appreciate them. Be specific. Watch them glow.",
+            "Someone crossed your mind just now. That’s your sign. Say hi.",
+            "Ask someone how they’re really doing. Then actually listen.",
+            "Send a friend a memory that still makes you laugh.",
+            "Compliment a stranger today. Quietly counts too.",
+            "Call the person you keep meaning to call.",
+        ],
+    },
+    {
+        id: "mood",
+        label: "A Mood Shift",
+        emoji: "\u{1F3A7}",
+        color: "#7C8C6B",
+        messages: [
+            "Put on your favourite song. And don’t skip it.",
+            "If today had a soundtrack, what would it be? Play it.",
+            "Play the song that always fixes things. You know the one.",
+            "Hum something. Badly. On purpose.",
+            "Play a song from a really good summer. Go back for three minutes.",
+            "Dance for thirty seconds. Nobody’s watching. If they are, invite them.",
+            "Play something loud. Then something soft. Feel the difference.",
+            "Find a song you’ve never heard. Press play on a tiny adventure.",
+        ],
+    },
+    {
+        id: "silly",
+        label: "Something Silly",
+        emoji: "\u{1F60C}",
+        color: "#8B7D9E",
+        messages: [
+            "Give yourself an unnecessarily dramatic compliment.",
+            "Wink at yourself in the next mirror you pass. Commit to it.",
+            "Name the nearest houseplant. All houseplants deserve names.",
+            "Do your royal wave at absolutely no one.",
+            "Invent a tiny celebration for something boring you did today.",
+            "Narrate your next ten seconds like a nature documentary.",
+            "Strike your superhero pose. Hold it. Yes, longer.",
+            "Text someone a single emoji with zero context.",
+        ],
+    },
+];
+
+export const pickSession = (prev = []) =>
+    CATEGORIES.map((c, i) => {
+        const pool = c.messages.filter((m) => m !== prev[i]);
+        return pool[Math.floor(Math.random() * pool.length)];
+    });
